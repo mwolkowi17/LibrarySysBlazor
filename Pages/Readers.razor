@@ -1,0 +1,51 @@
+@page "/readers"
+@inject HttpClient Http
+
+<h1>Readers</h1>
+
+<p>This is the list of Readers/Users of the library.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.ReaderID</td>
+                    <td>@forecast.Name</td>
+                    <td>@forecast.Surname</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private ReadersList[] forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await Http.GetFromJsonAsync<ReadersList[]>("https://localhost:44381/api/Readers");
+    }
+
+    public class ReadersList
+    {
+        public int ReaderID { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+    }
+}

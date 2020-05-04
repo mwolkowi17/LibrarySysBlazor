@@ -1,0 +1,52 @@
+@page "/fetchdata"
+@inject HttpClient Http
+
+<h1>Books</h1>
+
+<p>This is the list of Books in the library.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ttitle</th>
+                <th>Author</th>
+                <th>Rented</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.BookCID</td>
+                    <td>@forecast.TitleC</td>
+                    <td>@forecast.AuthorC</td>
+                    <td>@forecast.Rented</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private BookList[] forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await Http.GetFromJsonAsync<BookList[]>("https://localhost:44381/api/BookCs");
+    }
+
+    public class BookList
+    {
+        public int BookCID { get; set; }
+        public string TitleC { get; set; }
+        public string AuthorC { get; set; }
+        public bool Rented { get; set; }
+    }
+}
