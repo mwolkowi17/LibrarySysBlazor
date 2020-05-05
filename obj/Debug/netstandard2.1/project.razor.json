@@ -58,6 +58,55 @@
       },
       {
         "Kind": "Components.Component",
+        "Name": "LibrarySysClient.Pages.FetchData",
+        "AssemblyName": "LibrarySysClient",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LibrarySysClient.Pages.FetchData"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "LibrarySysClient.Pages.FetchData",
+        "AssemblyName": "LibrarySysClient",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LibrarySysClient.Pages.FetchData",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LibrarySysClient.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "LibrarySysClient.Pages.Index",
         "AssemblyName": "LibrarySysClient",
         "Documentation": null,
@@ -156,14 +205,14 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "LibrarySysClient.Pages.FetchData",
+        "Name": "LibrarySysClient.Pages.Find",
         "AssemblyName": "LibrarySysClient",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData",
+            "TagName": "Find",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -175,19 +224,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LibrarySysClient.Pages.FetchData"
+          "Common.TypeName": "LibrarySysClient.Pages.Find"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "LibrarySysClient.Pages.FetchData",
+        "Name": "LibrarySysClient.Pages.Find",
         "AssemblyName": "LibrarySysClient",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "LibrarySysClient.Pages.FetchData",
+            "TagName": "LibrarySysClient.Pages.Find",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -199,7 +248,7 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LibrarySysClient.Pages.FetchData",
+          "Common.TypeName": "LibrarySysClient.Pages.Find",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16624,6 +16673,11 @@
     {
       "FilePath": "c:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\Pages\\Find.razor",
+      "TargetPath": "Pages\\Find.razor",
       "FileKind": "component"
     },
     {

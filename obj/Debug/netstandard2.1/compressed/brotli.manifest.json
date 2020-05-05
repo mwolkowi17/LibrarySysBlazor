@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Rc7Ujcbmfd7YoGXHFM2GuiGO3Sm5E_gWFBetN20mujw=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\g-KBRsUgLL1e7yAJUw2vj16kiHFvODQGIQWztzBoxMg=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\LibrarySysClient.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/LibrarySysClient.dll.br"
     },
@@ -261,7 +261,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\jfs1TXxC1WkuCyv4NTSHgEwVqKkkcCMs8afNAsgh7Q8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\FmEWir9aSIFO436mgYAyjAWAjdk7BrsoyBHb1MJSmd8=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\LibrarySysClient.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/LibrarySysClient.pdb.br"
     },
@@ -286,7 +286,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\BEF45Pj3GlLqRLDAHFluZlX4aBdiLWpE6gFmd5od2r8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_Z0rmATxdXTQ5o5oyNcuPKTWKLfmn9soB-0L4V0oZmU=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }

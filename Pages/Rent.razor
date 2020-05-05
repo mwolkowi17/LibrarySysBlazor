@@ -4,157 +4,115 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="card"> 
-               <div class="card-body"> 
-                   <h5 class="card-title">Find Book</h5>
-                        <div class="row">
-                          <div class="col">
-                          <input class="form-control" placeholder="Tytuł" @bind="CurrentValue" >
-                          </div>
-                          <div class="col">
-                          <button type="button" class="btn btn-outline-primary" @onclick="searchtitle">Find</button>
-                          </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"> Rent a book</h5>
+                    <div class="row">
+                        <div class="col m-3">
+                            <input class="form-control " placeholder="Book ID" @bind="InputAValue">
                         </div>
-                        @if (searchbook == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Ttitle</th>
-                <th>Author</th>
-                <th>Rented</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var book in searchbook)
-            {
-                
-                <tr>
-                    <td>@book.BookCID</td>
-                    <td>@book.TitleC</td>
-                    <td>@book.AuthorC</td>
-                    <td>@book.Rented</td>
-                </tr>
-                
-            }
-        </tbody>
-    </table>
-}
-               </div>  
+                        <div class="col m-3">
+                            <h5> Book ID</h5>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-3">
+                            <input class="form-control" placeholder="Reader ID" @bind="InputBValue">
+                        </div>
+                        <div class="col m-3">
+                            <h5> Reader ID</h5>
+                  
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col m-3">
+                            <button type="button" class="btn btn-outline-primary" @onclick="selectBook">Select</button>
+                        </div>
+                        <div class="col">
+
+                        </div>
+                    </div>        
+                </div>
             </div>
         </div>
         <div class="col">
-            <div class="card"> 
-               <div class="card-body"> 
-                   <h5 class="card-title">Find Reader</h5>
-                   <div class="row">
-                       <div class="col">
-                       <input class="form-control" placeholder="Surname" @bind="CurrentValueReader">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"> Selected Book</h5>
+                    <div class="row m-3">
+                    <h5>Book: <b>@ShowedValueA</b></h5>
+                    </div>
+                    <div class="row m-3">
+                    <h5>User: <b>@ShowedValueB</b></h5>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col m3">
+                            <button type="button" class="btn btn-outline-primary" >Rent this book</button>
                        </div>
-                       <div class="col">
-                       <button type="button" class="btn btn-outline-primary" @onclick="searchuser">Find</button>
+                       <div class="col m3">
+                           <button type="button" class="btn btn-outline-primary" >Cancel</button>
                        </div>
-                   </div>
-                   @if (searchreader== null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Surname</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var book in searchreader)
-            {
-                
-                <tr>
-                    <td>@book.ReaderID</td>
-                    <td>@book.Name</td>
-                    <td>@book.Surname</td>
-                    
-                </tr>
-                
-            }
-        </tbody>
-    </table>
-}
-               </div>  
+                        
+                    </div>  
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 @code {
-    private BookList[] listofbooks;
-    private ReadersList[] listofreaders;
+private int InputAValue {get; set;}
+private int InputBValue {get; set;}
+
+public string ShowedValueA=null;
+
+public string ShowedValueB=null;
+ private BookList[] listofbooks;
+ private ReadersList[] listofreaders;
     protected override async Task OnInitializedAsync()
     {
         listofbooks = await Http.GetFromJsonAsync<BookList[]>("https://localhost:44381/api/BookCs");
         listofreaders = await Http.GetFromJsonAsync<ReadersList[]>("https://localhost:44381/api/Readers");
     }
-
-    public class BookList
+ private BookList roboczabook;
+ private ReadersList roboczyreader;
+ public void selectBook(){
+        foreach(BookList n in listofbooks){
+            if(n.BookCID==InputAValue){
+                roboczabook=n;
+            }
+        }
+        foreach(ReadersList m in listofreaders){
+            if(m.ReaderID==InputBValue){
+                roboczyreader=m;
+            }
+        }
+        if(roboczabook!=null){
+           ShowedValueA=roboczabook.TitleC+" - "+roboczabook.AuthorC; 
+        }
+        if(roboczyreader!=null){
+            ShowedValueB=roboczyreader.Name+" "+roboczyreader.Surname;
+        }
+       // ShowedValueB=roboczyreader.Name+" "+roboczyreader.Surname;
+ }    
+ public class BookList
     {
         public int BookCID { get; set; }
         public string TitleC { get; set; }
         public string AuthorC { get; set; }
         public bool Rented { get; set; }
     }
-    
-    public BookList roboczyszukacz=new BookList();
-    
-    public BookList[] searchbook=new BookList[]{};
-    public ReadersList[] searchreader=new ReadersList[]{};
-    public string tytułroboczy="Pan Tadeusz";
-   
-   private string CurrentValue { get; set; }
-   private string CurrentValueReader {get; set;}
-   public BookList roboczabook{get;set;}
-   public ReadersList roboczyreader {get; set;}
-   public void searchtitle (){
-       
-       
-       foreach (var n in listofbooks){
-         if(n.TitleC==CurrentValue){
-          roboczabook= n;
-         }
-       }
-       if(roboczabook!=null){
-       searchbook=new BookList[1];
-       searchbook[0]=roboczabook;
-       }
-   }
 
-   public void searchuser(){
-       foreach(var m in listofreaders){
-           if(m.Surname==CurrentValueReader){
-               roboczyreader=m;
-           }
-       }
-       if(roboczyreader!=null){
-           searchreader=new ReadersList[1];
-           searchreader[0]=roboczyreader;
-       }
-   }
-
-
-
-
-    public class ReadersList
+public class ReadersList
     {
         public int ReaderID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Alias {get;set;}
     }
 }
