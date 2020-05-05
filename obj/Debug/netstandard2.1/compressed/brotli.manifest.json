@@ -1,34 +1,9 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\g-KBRsUgLL1e7yAJUw2vj16kiHFvODQGIQWztzBoxMg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\HKHHzKNU35I3fy9z8uqmqI_Pba_wUDdZ27opglyA7T4=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\LibrarySysClient.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/LibrarySysClient.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_IansbyiPIbBxBPwqKb6GLCNiqhuqeIc5S8yC5s7yF4=.hash",
-      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Net.Http.Json.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Net.Http.Json.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZxXy75PYbzJxNfAc-SAP1nUYm4gt1jSaOpFnBb9m85M=.hash",
-      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Buffers.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Buffers.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\uaG3AW80GeXVlZrMLb3Q0VZ6jBkzXqzaUAgKgtZbStA=.hash",
-      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\mscorlib.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/mscorlib.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\TkH6yxFQlTfY8NfznePrCdYJiEVpM9Dqy4Uu4H9qk10=.hash",
-      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Threading.Tasks.Extensions.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Threading.Tasks.Extensions.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\-cPXlNTX8GKF-lIn-2DIjtxTe0Wpy4ZDcyAj67b6JYk=.hash",
-      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Memory.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Memory.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\pzCorxTCjbUODF5JuRgcHc8gVYEdSaKD9NWA6wZhTPE=.hash",
@@ -39,6 +14,16 @@
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZU-LxbBfk6ofRNm5ssrK-q6PzRLORfKvNAiEFjX0mYM=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Runtime.CompilerServices.Unsafe.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Runtime.CompilerServices.Unsafe.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\uaG3AW80GeXVlZrMLb3Q0VZ6jBkzXqzaUAgKgtZbStA=.hash",
+      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\mscorlib.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/mscorlib.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZxXy75PYbzJxNfAc-SAP1nUYm4gt1jSaOpFnBb9m85M=.hash",
+      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Buffers.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Buffers.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\OBWh2or_2mU6elwqPfmL72FBZVKl2WzTJ4L-IrKeXM4=.hash",
@@ -69,6 +54,11 @@
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ob5gN-szfb1CwWnyQWvWvuid3u4df593KvZeoJQEaKc=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebAssembly.Net.WebSockets.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebAssembly.Net.WebSockets.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\-cPXlNTX8GKF-lIn-2DIjtxTe0Wpy4ZDcyAj67b6JYk=.hash",
+      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Memory.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Memory.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\6XMT1eT3svGdg6hFzAHJscYdTQjakoYccYTdHmKSr7Y=.hash",
@@ -146,6 +136,11 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Data.dll.br"
     },
     {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\TkH6yxFQlTfY8NfznePrCdYJiEVpM9Dqy4Uu4H9qk10=.hash",
+      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Threading.Tasks.Extensions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Threading.Tasks.Extensions.dll.br"
+    },
+    {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\GpbKjKcZS2DFFmkFiWZ0C5pPRActMWogSgSZcQHg1SA=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Numerics.Vectors.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Numerics.Vectors.dll.br"
@@ -154,6 +149,11 @@
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hbEA2pdvgll2bWeJXCtehEV3kl3WFnBgQj6ttcesEA4=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Text.Encodings.Web.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Text.Encodings.Web.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_IansbyiPIbBxBPwqKb6GLCNiqhuqeIc5S8yC5s7yF4=.hash",
+      "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Net.Http.Json.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Net.Http.Json.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ycn-UHLnjC77BNvsurP4mkuYP8oud1oVyfSSlZKMymc=.hash",
@@ -261,7 +261,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\FmEWir9aSIFO436mgYAyjAWAjdk7BrsoyBHb1MJSmd8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\xMxDf-aE22J0Jw8ME-gY4oHopVFFpAIHDT8JF3qd5jE=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\LibrarySysClient.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/LibrarySysClient.pdb.br"
     },
@@ -286,7 +286,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_Z0rmATxdXTQ5o5oyNcuPKTWKLfmn9soB-0L4V0oZmU=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\-FUeYnIYfB3ieNiO8Raae1HhW4kesdOjNmrXTrj4i4E=.hash",
       "Source": "C:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }

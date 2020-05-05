@@ -1,5 +1,7 @@
 @page "/rent"
+@using System.Net.Http
 @inject HttpClient Http
+
 
 <div class="container">
     <div class="row">
@@ -52,7 +54,7 @@
                     </div>
                     <div class="row m-3">
                         <div class="col m3">
-                            <button type="button" class="btn btn-outline-primary" >Rent this book</button>
+                            <button type="button" class="btn btn-outline-primary" @onclick="SaveItem">Rent this book</button>
                        </div>
                        <div class="col m3">
                            <button type="button" class="btn btn-outline-primary" >Cancel</button>
@@ -81,6 +83,11 @@ public string ShowedValueB=null;
     }
  private BookList roboczabook;
  private ReadersList roboczyreader;
+
+
+private async Task SaveItem(){
+    await Http.PutAsJsonAsync($"https://localhost:44381/api/BookCs/{InputAValue}",roboczabook);
+}
  public void selectBook(){
         foreach(BookList n in listofbooks){
             if(n.BookCID==InputAValue){
@@ -94,6 +101,7 @@ public string ShowedValueB=null;
         }
         if(roboczabook!=null){
            ShowedValueA=roboczabook.TitleC+" - "+roboczabook.AuthorC; 
+           roboczabook.Rented=true;
         }
         if(roboczyreader!=null){
             ShowedValueB=roboczyreader.Name+" "+roboczyreader.Surname;
