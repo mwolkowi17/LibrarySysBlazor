@@ -1,0 +1,160 @@
+@page "/rent"
+@inject HttpClient Http
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card"> 
+               <div class="card-body"> 
+                   <h5 class="card-title">Find Book</h5>
+                        <div class="row">
+                          <div class="col">
+                          <input class="form-control" placeholder="Tytuł" @bind="CurrentValue" >
+                          </div>
+                          <div class="col">
+                          <button type="button" class="btn btn-outline-primary" @onclick="searchtitle">Find</button>
+                          </div>
+                        </div>
+                        @if (searchbook == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ttitle</th>
+                <th>Author</th>
+                <th>Rented</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in searchbook)
+            {
+                
+                <tr>
+                    <td>@book.BookCID</td>
+                    <td>@book.TitleC</td>
+                    <td>@book.AuthorC</td>
+                    <td>@book.Rented</td>
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+}
+               </div>  
+            </div>
+        </div>
+        <div class="col">
+            <div class="card"> 
+               <div class="card-body"> 
+                   <h5 class="card-title">Find Reader</h5>
+                   <div class="row">
+                       <div class="col">
+                       <input class="form-control" placeholder="Surname" @bind="CurrentValueReader">
+                       </div>
+                       <div class="col">
+                       <button type="button" class="btn btn-outline-primary" @onclick="searchuser">Find</button>
+                       </div>
+                   </div>
+                   @if (searchreader== null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in searchreader)
+            {
+                
+                <tr>
+                    <td>@book.ReaderID</td>
+                    <td>@book.Name</td>
+                    <td>@book.Surname</td>
+                    
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+}
+               </div>  
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    private BookList[] listofbooks;
+    private ReadersList[] listofreaders;
+    protected override async Task OnInitializedAsync()
+    {
+        listofbooks = await Http.GetFromJsonAsync<BookList[]>("https://localhost:44381/api/BookCs");
+        listofreaders = await Http.GetFromJsonAsync<ReadersList[]>("https://localhost:44381/api/Readers");
+    }
+
+    public class BookList
+    {
+        public int BookCID { get; set; }
+        public string TitleC { get; set; }
+        public string AuthorC { get; set; }
+        public bool Rented { get; set; }
+    }
+    
+    public BookList roboczyszukacz=new BookList();
+    
+    public BookList[] searchbook=new BookList[]{};
+    public ReadersList[] searchreader=new ReadersList[]{};
+    public string tytułroboczy="Pan Tadeusz";
+   
+   private string CurrentValue { get; set; }
+   private string CurrentValueReader {get; set;}
+   public BookList roboczabook{get;set;}
+   public ReadersList roboczyreader {get; set;}
+   public void searchtitle (){
+       
+       
+       foreach (var n in listofbooks){
+         if(n.TitleC==CurrentValue){
+          roboczabook= n;
+         }
+       }
+       if(roboczabook!=null){
+       searchbook=new BookList[1];
+       searchbook[0]=roboczabook;
+       }
+   }
+
+   public void searchuser(){
+       foreach(var m in listofreaders){
+           if(m.Surname==CurrentValueReader){
+               roboczyreader=m;
+           }
+       }
+       if(roboczyreader!=null){
+           searchreader=new ReadersList[1];
+           searchreader[0]=roboczyreader;
+       }
+   }
+
+
+
+
+    public class ReadersList
+    {
+        public int ReaderID { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+    }
+}

@@ -58,55 +58,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "LibrarySysClient.Pages.Counter",
-        "AssemblyName": "LibrarySysClient",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LibrarySysClient.Pages.Counter"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "LibrarySysClient.Pages.Counter",
-        "AssemblyName": "LibrarySysClient",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LibrarySysClient.Pages.Counter",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LibrarySysClient.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "LibrarySysClient.Pages.Index",
         "AssemblyName": "LibrarySysClient",
         "Documentation": null,
@@ -151,6 +102,55 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "LibrarySysClient.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "LibrarySysClient.Pages.Readers",
+        "AssemblyName": "LibrarySysClient",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Readers",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LibrarySysClient.Pages.Readers"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "LibrarySysClient.Pages.Readers",
+        "AssemblyName": "LibrarySysClient",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LibrarySysClient.Pages.Readers",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LibrarySysClient.Pages.Readers",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -205,14 +205,14 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "LibrarySysClient.Pages.Readers",
+        "Name": "LibrarySysClient.Pages.Counter",
         "AssemblyName": "LibrarySysClient",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Readers",
+            "TagName": "Counter",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -224,19 +224,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LibrarySysClient.Pages.Readers"
+          "Common.TypeName": "LibrarySysClient.Pages.Counter"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "LibrarySysClient.Pages.Readers",
+        "Name": "LibrarySysClient.Pages.Counter",
         "AssemblyName": "LibrarySysClient",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "LibrarySysClient.Pages.Readers",
+            "TagName": "LibrarySysClient.Pages.Counter",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -248,7 +248,56 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LibrarySysClient.Pages.Readers",
+          "Common.TypeName": "LibrarySysClient.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "LibrarySysClient.Pages.Rent",
+        "AssemblyName": "LibrarySysClient",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Rent",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LibrarySysClient.Pages.Rent"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "LibrarySysClient.Pages.Rent",
+        "AssemblyName": "LibrarySysClient",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LibrarySysClient.Pages.Rent",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LibrarySysClient.Pages.Rent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16590,6 +16639,11 @@
     {
       "FilePath": "c:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\App.razor",
       "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Marcin\\source\\repos\\LibrarySysClient\\LibrarySysClient\\Pages\\Rent.razor",
+      "TargetPath": "Pages\\Rent.razor",
       "FileKind": "component"
     },
     {
