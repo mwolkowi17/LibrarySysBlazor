@@ -57,9 +57,12 @@
                             <button type="button" class="btn btn-outline-primary" @onclick="SaveItem">Rent this book</button>
                        </div>
                        <div class="col m3">
-                           <button type="button" class="btn btn-outline-primary" >Cancel</button>
+                           <button type="button" class="btn btn-outline-primary" @onclick="CancelSelection" >Cancel</button>
                        </div>
                         
+                    </div>
+                    <div class="row m-3">
+                    <h5><b>@ShowedValueC</b></h5>
                     </div>  
                 </div>
             </div>
@@ -74,6 +77,8 @@ private int InputBValue {get; set;}
 public string ShowedValueA=null;
 
 public string ShowedValueB=null;
+
+public string ShowedValueC=null;
  private BookList[] listofbooks;
  private ReadersList[] listofreaders;
     protected override async Task OnInitializedAsync()
@@ -87,6 +92,7 @@ public string ShowedValueB=null;
 
 private async Task SaveItem(){
     await Http.PutAsJsonAsync($"https://localhost:44381/api/BookCs/{InputAValue}",roboczabook);
+    ShowedValueC="Book has been rented";
 }
  public void selectBook(){
         foreach(BookList n in listofbooks){
@@ -102,18 +108,25 @@ private async Task SaveItem(){
         if(roboczabook!=null){
            ShowedValueA=roboczabook.TitleC+" - "+roboczabook.AuthorC; 
            roboczabook.Rented=true;
+           roboczabook.RentedbyReader=roboczyreader.ReaderID;
         }
         if(roboczyreader!=null){
             ShowedValueB=roboczyreader.Name+" "+roboczyreader.Surname;
         }
        // ShowedValueB=roboczyreader.Name+" "+roboczyreader.Surname;
  }    
+
+ public void CancelSelection(){
+     ShowedValueA=null;
+     ShowedValueB=null;
+ }
  public class BookList
     {
         public int BookCID { get; set; }
         public string TitleC { get; set; }
         public string AuthorC { get; set; }
         public bool Rented { get; set; }
+        public int RentedbyReader { get; set; }
     }
 
 public class ReadersList

@@ -360,6 +360,8 @@ C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstan
 C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\Razor\Pages\Find.razor.g.cs
 C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Rent.razor.g.cs
 C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\Razor\Pages\Rent.razor.g.cs
-C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\integrity\HKHHzKNU35I3fy9z8uqmqI_Pba_wUDdZ27opglyA7T4=.hash
-C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\integrity\xMxDf-aE22J0Jw8ME-gY4oHopVFFpAIHDT8JF3qd5jE=.hash
-C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\integrity\-FUeYnIYfB3ieNiO8Raae1HhW4kesdOjNmrXTrj4i4E=.hash
+C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Return.razor.g.cs
+C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\Razor\Pages\Return.razor.g.cs
+C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\integrity\M8z_lXIESg17_MDevf5vxdOuVr6RNaV5PaprzH4PiWc=.hash
+C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\integrity\yzOrHgw9T8AXqb9-YzlCuUB5ORvOo7MVTs5DEMDfMq0=.hash
+C:\Users\Marcin\source\repos\LibrarySysClient\LibrarySysClient\obj\Debug\netstandard2.1\integrity\3jKsdPN7sov5BXcN5JoGvmkzxpOPbK5Jme6ZOXE8vxM=.hash

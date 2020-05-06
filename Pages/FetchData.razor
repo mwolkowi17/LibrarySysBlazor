@@ -18,6 +18,7 @@ else
                 <th>Ttitle</th>
                 <th>Author</th>
                 <th>Rented</th>
+                <th>Reader ID</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,7 @@ else
                     <td>@forecast.TitleC</td>
                     <td>@forecast.AuthorC</td>
                     <td>@forecast.Rented</td>
+                    <td>@forecast.RentedbyReader</td>
                 </tr>
             }
         </tbody>
@@ -48,5 +50,6 @@ else
         public string TitleC { get; set; }
         public string AuthorC { get; set; }
         public bool Rented { get; set; }
+        public int RentedbyReader { get; set; }
     }
 }
