@@ -92,7 +92,7 @@ public string ShowedValueC=null;
 
 private async Task SaveItem(){
     await Http.PutAsJsonAsync($"https://localhost:44381/api/BookCs/{InputAValue}",roboczabook);
-    ShowedValueC="Book has been rented";
+    ShowedValueC="Book has been rented by " + roboczyreader.Alias;
 }
  public void selectBook(){
         foreach(BookList n in listofbooks){
