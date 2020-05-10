@@ -1,0 +1,202 @@
+@page "/addreader"
+@using System.Net.Http
+@inject HttpClient Http
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Add new reader</h5>
+                    <div class="row">
+                        <div class="col m-3">
+                            <input class="form-control " placeholder="Name" @bind="InputAValue">
+                        </div>
+                        <div class="col m-3">
+                            <h5> Name</h5>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col m-3">
+                            <input class="form-control " placeholder="Surname" @bind="InputBValue">
+                        </div>
+                        <div class="col m-3">
+                            <h5> Surname</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-3">
+                            <button type="button" class="btn btn-outline-primary" @onclick="selectBook">Select</button>
+                        </div>
+                        <div class="col m-3">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        @if (listofbooks == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reader in listofreaders)
+            {
+                
+                <tr>
+                    <td>@reader.ReaderID</td>
+                    <td>@reader.Name</td>
+                    <td>@reader.Surname</td>
+                    <td><button @onclick="@(() => RemoveItem(reader))">Remove</button></td>
+                    
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+}
+</div>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">New user to add</h5>
+                    <div class="row m-3">
+                    <h5>Name: <b>@ShowedValueA</b></h5>
+                    </div>
+                    <div class="row m-3">
+                    <h5>Surname: <b>@ShowedValueB</b></h5>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col m3">
+                            <button type="button" class="btn btn-outline-primary" @onclick="SaveItem">Add to library</button>
+                       </div>
+                       <div class="col m3">
+                           <button type="button" class="btn btn-outline-primary" @onclick="CancelSelection" >Cancel</button>
+                       </div>
+                        
+                    </div>
+                    <div class="row m-3">
+                    <h5><b>@ShowedValueC</b></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@code{
+    private string InputAValue {get; set;}
+    private string InputBValue {get; set;}
+
+    public string ShowedValueA=null;
+
+    public string ShowedValueB=null;
+
+    public string ShowedValueC=null;
+    private BookList[] listofbooks;
+    private ReadersList[] listofreaders;
+    protected override async Task OnInitializedAsync()
+    {
+        listofbooks = await Http.GetFromJsonAsync<BookList[]>("https://localhost:44381/api/BookCs");
+        listofreaders = await Http.GetFromJsonAsync<ReadersList[]>("https://localhost:44381/api/Readers");
+    }
+    
+    public void selectBook(){
+        
+        ShowedValueA=InputAValue;
+        ShowedValueB=InputBValue;
+        roboczyreader=new ReadersList();
+        roboczyreader.Name=InputAValue;
+        roboczyreader.Surname=InputBValue;
+    }
+    private async Task SaveItem(){
+    //roboczabook.Rented=false;
+    //roboczabook.RentedbyReader=0;
+    await Http.PostAsJsonAsync("https://localhost:44381/api/Readers",roboczyreader);
+    ShowedValueC="New user has been added";
+    listofreaders = await Http.GetFromJsonAsync<ReadersList[]>("https://localhost:44381/api/Readers");
+}
+    private async Task RemoveItem(ReadersList item){
+    await Http.DeleteAsync($"https://localhost:44381/api/Readers/{item.ReaderID}");
+    listofreaders = await Http.GetFromJsonAsync<ReadersList[]>("https://localhost:44381/api/Readers");
+
+    }
+    public class ItemToDelete{
+        public int Id {get; set;}
+    }
+    public void CancelSelection(){
+     ShowedValueA=null;
+     ShowedValueB=null;
+     
+ }
+    public class BookList
+    {
+        public int BookCID { get; set; }
+        public string TitleC { get; set; }
+        public string AuthorC { get; set; }
+        public bool Rented { get; set; }
+        public int RentedbyReader {get; set;}
+    }
+    
+    public BookList roboczyszukacz=new BookList();
+    
+    public BookList[] searchbook=new BookList[]{};
+    public ReadersList[] searchreader=new ReadersList[]{};
+    public string tytułroboczy="Pan Tadeusz";
+   
+   private string CurrentValue { get; set; }
+   private string CurrentValueReader {get; set;}
+   public BookList roboczabook{get;set;}
+   public ReadersList roboczyreader {get; set;}
+   public void searchtitle (){
+       
+       
+       foreach (var n in listofbooks){
+         if(n.TitleC==CurrentValue){
+          roboczabook= n;
+         }
+       }
+       if(roboczabook!=null){
+       searchbook=new BookList[1];
+       searchbook[0]=roboczabook;
+       }
+   }
+
+   public void searchuser(){
+       foreach(var m in listofreaders){
+           if(m.Alias==CurrentValueReader){
+               roboczyreader=m;
+           }
+       }
+       if(roboczyreader!=null){
+           searchreader=new ReadersList[1];
+           searchreader[0]=roboczyreader;
+       }
+   }
+
+
+
+
+    public class ReadersList
+    {
+        public int ReaderID { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Alias {get;set;}
+    }
+}
+
